@@ -17,4 +17,12 @@ pre-commit run --all-files
 ```
 
 # Github Action 
-- This action should pass for you to be able to merge branch with the main
+- This GitHub action will run once you create a Pull Request. 
+- The action will install poetry and pytest, and then it will pass only if all tests pass. 
+- This will somewhat minimize the errors in deployment.
+
+### Ruleset 
+- No direct commit to main
+- Pre-commit reformats, and type checks
+- Once PR is created test have to pass for it to be merged
+- Additionally, I could add that there has to be 1 approver of the code.
