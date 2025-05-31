@@ -25,4 +25,4 @@ jobs:
 
       - name: Run PyTest
         working-directory: library
-        run: poetry run pytest
+        run: pytest
