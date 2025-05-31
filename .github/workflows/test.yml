@@ -24,8 +24,7 @@ jobs:
         run: poetry add pytest --dev
 
       - name: Install dependencies
-        run: poetry install
-
+        run: poetry install --no-root
 
       - name: Run PyTest
         run: poetry run pytest
