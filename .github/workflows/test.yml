@@ -1,7 +1,9 @@
 name: Running pytest
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
