@@ -21,7 +21,11 @@ jobs:
         run: pipx install poetry
 
       - name: Add pytest
-        run: poetry add pytest
+        run: poetry add pytest --dev
+
+      - name: Install dependencies
+        run: poetry install
+
 
       - name: Run PyTest
         run: poetry run pytest
