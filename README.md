@@ -26,3 +26,6 @@ pre-commit run --all-files
 - Pre-commit reformats, and type checks
 - Once PR is created test have to pass for it to be merged
 - Additionally, I could add that there has to be 1 approver of the code.
+
+
+- Showcase PR
