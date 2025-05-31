@@ -17,4 +17,4 @@ pre-commit run --all-files
 ```
 
 # Github Action 
-- It should work once the branch is merge with main.
+- This action should pass for you to be able to merge branch with the main
