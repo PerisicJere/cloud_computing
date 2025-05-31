@@ -24,4 +24,4 @@ jobs:
         run: poetry add pytest
 
       - name: Run PyTest
-        run: pytest
+        run: poetry run pytest
