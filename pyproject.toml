@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cloud-computing"
+version = "0.1.0"
+description = ""
+authors = ["Jere Perisic <jperisic@safebeatrx.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pytest = "^8.3.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
