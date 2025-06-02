@@ -1,3 +1,10 @@
+# Recreate code
+
+- Run `git clone <ssh or https>` to clone remote code to your local machine
+- Set up poetry, and run `poetry install`. 
+- To set up poetry through CLI, `cd <repo location>`, run `poetry shell`
+
+
 # Before you run
 
 - This repo has pre-commit to install it follwo these steps.
