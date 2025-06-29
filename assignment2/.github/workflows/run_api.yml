@@ -1,0 +1,17 @@
+name: Build and Run Docker
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build and run
+      run: |
+        docker build -t app-api-image .
+        docker run -d --name app -p 8000:8000 app-api-image
