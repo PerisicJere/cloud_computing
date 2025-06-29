@@ -2,7 +2,7 @@ import pytest
 import json
 import tempfile
 import os
-from app import app, db, Item
+from cloud_computing.assignment2.app import app, db, Item
 
 
 @pytest.fixture

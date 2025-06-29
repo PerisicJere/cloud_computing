@@ -1,6 +1,6 @@
 import pytest
 
-from bowling import Game
+from cloud_computing.assingment1.bowling import Game
 
 
 @pytest.fixture
