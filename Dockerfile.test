@@ -1,0 +1,16 @@
+FROM python:3.13
+
+WORKDIR /app
+
+RUN python -m venv venv
+ENV PATH="/app/venv/bin:$PATH"
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+ENV FLASK_ENV=testing
+ENV DATABASE_URL=sqlite:///:memory:
+
+CMD ["python", "-m", "pytest", "test_api.py", "-v", "--tb=short"]
