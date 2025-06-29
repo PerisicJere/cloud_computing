@@ -1,12 +1,14 @@
 name: Build and Run Docker
 
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./assignment2
 
     steps:
     - uses: actions/checkout@v4
