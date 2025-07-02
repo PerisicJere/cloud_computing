@@ -8,4 +8,30 @@
 
 ## GH workflows
 * There is a workflow in github and it is ready to be run manually. 
-* I have included one for tests, and one for server (just so we can check if docker is built). 
+* I have included one for tests, and one for server (just so we can check if docker is built).
+
+## API Endpoints
+- **GET /items**  
+  Renders a list of all items.
+
+- **POST /items/create**  
+  Creates a new item.  
+  ```json
+  {
+    "name": "Sword",
+    "description": "Sharp blade",
+    "damage": 10.5
+  }
+  ```
+  
+- **PUT /items/<item_id>/update**  
+  Updates the `damage` value of a specific item.
+
+  ```json
+  {
+    "damage": 15.0
+  }
+  ```
+
+- **DELETE /items/<item_id>/delete**  
+  Deletes the item with the specified ID.
