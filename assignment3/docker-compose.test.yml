@@ -1,0 +1,20 @@
+services:
+  localstack:
+    image: localstack/localstack:3.0
+    ports:
+      - "4567:4566"
+    environment:
+      - SERVICES=dynamodb,s3
+
+  app:
+    build: .
+    ports:
+      - "5002:5000"
+    depends_on:
+      - localstack
+
+  test:
+    build: .
+    depends_on:
+      - app
+    command: sh -c "sleep 10 && python -m pytest -v"

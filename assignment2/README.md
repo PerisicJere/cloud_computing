@@ -8,4 +8,4 @@
 
 ## GH workflows
 * There is a workflow in github and it is ready to be run manually. 
-* I have included one for tests, and one for server (just so we can check if docker is built). 
+* I have included one for tests, and one for server (just so we can check if docker is built).
