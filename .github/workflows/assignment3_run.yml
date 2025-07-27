@@ -1,17 +1,31 @@
 name: Assignment 3 Test
 
 on:
-  workflow_dispatch:
+ workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+ test:
+   runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v4
+   steps:
+   - uses: actions/checkout@v4
 
-    - name: Make scripts executable
-      run: chmod +x test.sh
+   - name: Install Docker Compose
+     run: |
+       sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+       sudo chmod +x /usr/local/bin/docker-compose
 
-    - name: Run tests
-      run: ./test.sh
+   - name: Run Docker Compose
+     uses: adambirds/docker-compose-action@v1.4.0
+     with:
+       compose-file: ./assignment3/docker-compose.test.yml
+       down-flags: --volumes
+       services: ''
+
+   - name: Make scripts executable
+     working-directory: ./assignment3
+     run: chmod +x test.sh
+
+   - name: Run tests
+     working-directory: ./assignment3
+     run: ./test.sh

@@ -124,6 +124,4 @@ def delete_item(item_id):
 
 
 if __name__ == '__main__':
-    if init_aws_resources():
-        app.run(host='0.0.0.0', port=5000)
-        exit(1)
+    app.run(host='0.0.0.0', port=5000)
