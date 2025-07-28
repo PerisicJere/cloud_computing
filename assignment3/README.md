@@ -53,3 +53,11 @@ DELETE /items/<item_id>
 ```
 
 This will delete an item with a specified item id.
+
+
+### Resources used
+1. https://stackoverflow.com/questions/61749489/getting-could-not-connect-to-the-endpoint-url-error-with-boto3-when-deploying
+2. https://stackoverflow.com/questions/75875534/table-created-successfully-but-dynamodb-cannot-find-it-boto3
+3. https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html
+4. https://github.com/orgs/community/discussions/116610
+5. claude prompt: Write an short Docker Compose up build for docker-compose.test.yml, with down and exit_code
